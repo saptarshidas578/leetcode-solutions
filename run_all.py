@@ -4,10 +4,12 @@ Validates syntax across all problem solutions in the repository.
 Distinguishes between clean Python syntax and files containing
 pre-existing LeetCode browser extension line numbers.
 """
+
 import os
 import sys
 import re
 import ast
+
 
 def validate_all_solutions():
     test_dir = os.path.join(os.path.dirname(__file__), "test")
@@ -29,8 +31,11 @@ def validate_all_solutions():
             else:
                 print(f"ERROR: {fname} -> {e}")
                 other_errors += 1
-    print(f"Summary: {clean_syntax} clean syntax solutions, {with_line_numbers} with upstream line numbers, {other_errors} parse errors.")
+    print(
+        f"Summary: {clean_syntax} clean syntax solutions, {with_line_numbers} with upstream line numbers, {other_errors} parse errors."
+    )
     return other_errors == 0
+
 
 if __name__ == "__main__":
     success = validate_all_solutions()
