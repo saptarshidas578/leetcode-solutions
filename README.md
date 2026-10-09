@@ -69,5 +69,5 @@ python test/20-Valid-Parentheses.py
 
 ## License
 
-Recommended: [MIT License](https://opensource.org/licenses/MIT).  
-*TODO(author): confirm license selection.*
+[MIT License](https://opensource.org/licenses/MIT).  
+
